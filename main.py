@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_wtf import CSRFProtect
 
 from forms import RequestForm
@@ -17,7 +17,9 @@ len_vin_number_error = 'Vin номер должен содержать не бо
 vin_number_error = 'Не корректный Vin номер'
 len_phone_number_error = 'Номер телефона должен содержать не более 11 символов'
 phone_number_error = 'Недопустимые символы в номере телефона'
-sent_successfully = 'Форма отправлена, ждите звонка'
+sent_successfully = 'Заявка отправлена, ждите звонка'
+
+
 def data_validity_check(form):
     #проверка имени на содержание не русских символов
     for char in form.name.data:
@@ -42,33 +44,38 @@ def data_validity_check(form):
 
 
 @app.route('/', methods=['POST', 'GET'])
-
 def main_page():
-
-
     if request.method == 'POST':
-
         form = RequestForm(request.form)
         error_data_or_ok = data_validity_check(form)
+
         if error_data_or_ok == sent_successfully:
 
-            message = f"Имя: {form.name} \n" \
-                        f"Номер телефона: {form.phone_number} \n" \
-                        f"VIN номер: {form.vin_number} \n" \
-                        f"Услуга: {form.service}"
+            message = f"Имя: {form.name.data} \n" \
+                        f"Номер телефона: {form.phone_number.data} \n" \
+                        f"VIN номер: {form.vin_number.data} \n" \
+                        f"Услуга: {form.service.data}"
 
             if send_telegram_message(message):
                 #подсказка формы - успешная отправка
                 flash(error_data_or_ok, category='sent_successfully')
             else:
                 flash('Ошибка отправки сообщения', category='error')
+
         else:
             #ормирование ошибок для формы
             flash('*' + error_data_or_ok, category='error')
+            #перенаправление на форму, для дальнейшего заполнения
+        return redirect(url_for('main_page') + '#MESS')
+
     else:
         form = RequestForm()
+
     return render_template('index.html', form=form)
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+

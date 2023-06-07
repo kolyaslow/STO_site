@@ -12,6 +12,9 @@
     <title>STO svoiludi</title>
   </head>
   <body>
+    <section id="{{ section_id }}">
+
+    </section>
     <header>
       <div class="container">
         <div class="label">
@@ -322,5 +325,19 @@
       </div>
     </footer>
     <script src="{{ url_for('static', filename='script.js')}}"></script>
+  <script>
+    window.onload = function() {
+        // Получение якоря из URL
+        var sectionId = window.location.hash.substr(1);
+
+        // Поиск элемента с указанным идентификатором
+        var sectionElement = document.getElementById(sectionId);
+
+        // Выполнение прокрутки к элементу
+        if (sectionElement) {
+            sectionElement.scrollIntoView();
+        }
+    };
+</script>
   </body>
 </html>
