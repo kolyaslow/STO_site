@@ -2,9 +2,12 @@ from flask import Flask, render_template, request, flash
 from telegram.send_telegram_message import send_telegram_message
 from string import ascii_letters, punctuation, whitespace
 from keys_and_id import SECRET_KEY
+from re import match
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
+
 
 name_error = 'Имя должно содержать только русские символы'
 len_vin_number_error = 'Vin номер должен содержать не более 17 символов'
@@ -22,9 +25,8 @@ def data_validity_check(form):
         return len_vin_number_error
 
     # проверка на содержание спец сиволов
-    for char in form['vin_number']:
-        if char in punctuation:
-            return vin_number_error
+    if not match(r'^[A-HJ-NPR-Z0-9]{17}$', form['vin_number']):
+        return vin_number_error
 
     #проверка номера талефона
     if len(form['phone_number']) > 11:
@@ -37,9 +39,12 @@ def data_validity_check(form):
 
 
 @app.route('/', methods=['POST', 'GET'])
+
 def main_page():
 
+
     if request.method == 'POST':
+
         form = request.form
         error_data_or_ok = data_validity_check(form)
         if error_data_or_ok == sent_successfully:
