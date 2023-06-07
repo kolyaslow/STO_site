@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from .telegram.send_telegram_message import send_telegram_message
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def main_page():
                     f"VIN номер: {form['vin_number']} \n" \
                     f"Услуга: {form['service']}"
         print(message)
-            send_telegram_message(message)
+        send_telegram_message(message)
     return render_template('index.html')
 
 
