@@ -623,6 +623,7 @@ header .container .message button:hover {
   transition: 0.4s all ease-in-out;
 }
 
+/*================форма==============*/
 .take {
   padding: 25px 40px;
 }
@@ -638,7 +639,7 @@ header .container .message button:hover {
 @media (min-width: 1024px) {
   .take .container {
     width: 950px;
-    height: 520px;
+    height: 550px;
   }
 }
 .take .container .main {
@@ -676,6 +677,21 @@ header .container .message button:hover {
     font-size: 36px;
   }
 }
+
+
+.take .container form .msg{
+    width: 217px;
+}
+
+@media (min-width: 1024px) {
+  .take .container form .msg {
+    font-size: 25px;
+    height: 50px;
+    width: 667px;
+    color: red;
+  }
+}
+
 .take .container form .inp_1 {
   width: 217px;
   background-color: #e9e8e8;
@@ -751,6 +767,8 @@ header .container .message button:hover {
 .take .container form button:hover {
   background-color: #140202;
 }
+/*================коней формы==============*/
+
 
 .darts .container {
   box-sizing: border-box;

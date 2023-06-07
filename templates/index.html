@@ -247,6 +247,9 @@
       <div class="container">
         <div class="main">Оставить заявку</div>
         <form action="/" method="post">
+          {% for msg in get_flashed_messages()%}
+            <div class="msg">{{msg}}</div>
+          {% endfor %}
           <label for="">Имя:</label>
           <input class="inp_1" type="name" name="name"/> <br />
           <label for="">Телефон:</label>
