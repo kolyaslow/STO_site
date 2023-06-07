@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, flash
 from telegram.send_telegram_message import send_telegram_message
 from string import ascii_letters, punctuation, whitespace
+from .keys_and_id import SECRET_KEY
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = SECRET_KEY
 
 def data_validity_check(form):
     #проверка имени на содержание не русских символов
