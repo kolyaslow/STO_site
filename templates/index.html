@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+    <title>STO svoiludi</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="label">
+          <a href="index.html"><img src="{{ url_for('static', filename='img/Group 1.svg')}}" alt="" /></a>
+        </div>
+        <div class="adres">
+          г. Москва, 1-я улица
+          <br />
+          Измайловского Зверинца,<br />
+          д.8, этаж 8
+        </div>
+        <div class="message">
+          <button><a href="#MESS">Оставить заявку</a></button>
+        </div>
+      </div>
+    </header>
+    <div class="head">
+      <div class="container">
+        <div class="services services1"><a href="#">Главная</a></div>
+        <div class="services services2"><a href="#OFF">Для клиентов</a></div>
+        <div class="services services3"><a href="#USL">Услуги</a></div>
+        <div class="services services4">
+          <a href="#MESS">Оставить Заявку</a>
+        </div>
+        <div class="services services5"><a href="#LOY">Лояльность</a></div>
+        <div class="services services6"><a href="#KONT">Контакты</a></div>
+      </div>
+    </div>
+    <div class="brand">
+      <div class="container">
+        <div class="left">
+          <p>Автосервис</p>
+          <h1>“СВОИ ЛЮДИ”</h1>
+          <div class="block">
+            <div class="item item1">Работа на новом оборудовании</div>
+            <div class="item">Мастера с опытом от 8 лет</div>
+            <div class="item">Выполнение работы за 30 минут</div>
+            <div class="item">Гарантия работы</div>
+          </div>
+        </div>
+        <div class="rigth">
+          <img class="rigth_1" src="{{ url_for('static', filename='img/Group3.png')}}" alt="" />
+          <img class="rigth_2" src="{{ url_for('static', filename='img/Group2.png')}}" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="OFF" class="offers">
+      <div class="container">
+        <div class="weOffers">Мы предлагаем:</div>
+        <div class="flexContainer">
+          <div class="cards">
+            <img src="{{ url_for('static', filename='img/Group8.png')}}" alt="" />
+            <h4>
+              Бесплатная <br />
+              охраняемая <br />
+              парковка
+            </h4>
+          </div>
+          <div class="cards">
+            <img src="{{ url_for('static', filename='img/Group7.png')}}" alt="" />
+            <h4>
+              Чай/кофе + <br />
+              шоколадки в зоне <br />
+              ожидания
+            </h4>
+          </div>
+          <div class="cards">
+            <img src="{{ url_for('static', filename='img/Group6.png')}}" alt="" />
+            <h4>
+              Подбор запчастей <br />
+              с гарантией <br />
+              по VIN номеру, <br />
+              привоз со склада
+            </h4>
+          </div>
+        </div>
+      </div>
+      <img class="Group4" src="{{ url_for('static', filename='img/Group4.png')}}" alt="" />
+      <img class="Group5" src="{{ url_for('static', filename='img/Group5.png')}}" alt="" />
+    </div>
+    <div id="USL" class="slader">
+      <div class="uslugi">Перечень услуг:</div>
+      <div class="container">
+        <div class="contBig">
+          <div class="toCont">
+            <div class="carusel_slide">
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-gearshift-2783855 1.png')}}" alt="" />
+                  <p>Ремонт АКПП</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-turbine-3627976 1.png')}}" alt="" />
+                  <p>Ремонт турбин</p>
+                </div>
+                <div class="cards">
+                  <img
+                    src="{{ url_for('static', filename='img/free-icon-air-conditioner-8126837 1.png')}}"
+                    alt=""
+                  />
+                  <p>Ремонт кондиционера</p>
+                </div>
+              </div>
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-timing-belt-2481619 1.png')}}" alt="" />
+                  <p>Замена ГРМ</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-oil-1793227 1.png')}}" alt="" />
+                  <p>Замена масла в МКПП</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-diagnosis-2084228 1.png')}}" alt="" />
+                  <p>Диагностика</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="toCont">
+            <div class="carusel_slide">
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-engine-2724480 1.png')}}" alt="" />
+                  <p>Ремонт двигателя</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-tire-3304153 1.png')}}" alt="" />
+                  <p>Ремонт ходовой</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-exhaust-pipe-5034968 1.png')}}" alt="" />
+                  <p>Ремонт выхлопной системы</p>
+                </div>
+              </div>
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-maintenance-1118481 1.png')}}" alt="" />
+                  <p>Техническое обслуживание</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-car-repair-846329 1.png')}}" alt="" />
+                  <p>Слесарный ремонт</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-fuel-1505581 1.png')}}" alt="" />
+                  <p>Промывка топливной системы</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="toCont">
+            <div class="carusel_slide">
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-gas-10450708 1.png')}}" alt="" />
+                  <p>Ремонт топливной системы</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-brake-950484 1.png')}}" alt="" />
+                  <p>Ремонт тормозной системы</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-suspension-586101 1.png')}}" alt="" />
+                  <p>Ремонт подвески</p>
+                </div>
+              </div>
+              <div class="contCards">
+                <div class="cards">
+                  <img
+                    src="{{ url_for('static', filename='img/mechanic-clipart-car-alignment-17 1.png')}}"
+                    alt=""
+                  />
+                  <p>Развал-схождение</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-tires-1965836 1.png')}}" alt="" />
+                  <p>Хранение шин</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-tires-2422813 1.png')}}" alt="" />
+                  <p>Шиномонтаж</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="toCont">
+            <div class="carusel_slide">
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-clutch-disc-3903025 1.png')}}" alt="" />
+                  <p>Замена сцепления</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-gearshift-2783855 1.png')}}" alt="" />
+                  <p>Ремонт АКПП</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-turbine-3627976 1.png')}}" alt="" />
+                  <p>Ремонт турбин</p>
+                </div>
+              </div>
+              <div class="contCards">
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/3314105-removebg-preview 1.png')}}" alt="" />
+                  <p>Диагностика ходовой</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-timing-belt-2481619 1.png')}}" alt="" />
+                  <p>Замена ГРМ</p>
+                </div>
+                <div class="cards">
+                  <img src="{{ url_for('static', filename='img/free-icon-oil-1793227 1.png')}}" alt="" />
+                  <p>Замена масла в МКПП</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btnWrap">
+        <button class="btn btn-left">
+          <i class="fa-solid fa-caret-left" style="color: #ffffff"></i>
+        </button>
+
+        <button class="btn btn-rigth">
+          <i class="fa-solid fa-caret-right" style="color: #ffffff"></i>
+        </button>
+      </div>
+    </div>
+    <div id="MESS" class="take">
+      <div class="container">
+        <div class="main">Оставить заявку</div>
+        <form action="/" method="post">
+          <label for="">Имя:</label>
+          <input class="inp_1" type="name" name="name"/> <br />
+          <label for="">Телефон:</label>
+          <input class="inp_2" type="name" name="phone_number"/><br />
+          <label for="">Vin номер:</label>
+          <input class="inp_3" type="name" name="vin_number"/><br />
+          <label for="">Услуга:</label>
+          <input class="inp_4" type="name" name="service"/>
+          <button>Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div id="LOY" class="darts">
+      <div class="container">
+        <div class="stocks">Акции автосервиса</div>
+        <div class="discount">
+          <img src="{{ url_for('static', filename='img/Rectangle18.png')}}" alt="" />
+          <div class="discountDarts">
+            <h3 style="margin-bottom: 30px">Скидка в дартс!</h3>
+            <h4 style="margin-bottom: 30px">
+              Попадание в 10 - 100%<br />
+              Попадание в 9 - 90%<br />
+              Попадание в 8 - 80%<br />
+              и т.д.
+            </h4>
+            <hr />
+            <h3 style="margin-top: 20px; margin-bottom: 30px">
+              1 попытка на 1 услугу.
+            </h3>
+            <h4>В случае непопадания - проигрыш.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="KONT">
+      <img class="abs" src="{{ url_for('static', filename='img/Group2.png')}}" alt="" />
+      <div class="container">
+        <div class="left">
+          <h3>
+            Качественный<br />
+            автосервис в Москве
+          </h3>
+          <div class="messager">
+            <i class="fa-brands fa-viber" style="color: #ffffff"></i>
+            <i
+              class="fa-brands fa-whatsapp"
+              style="color: #ffffff; margin: 0 5px"
+            ></i>
+            <div class="phone">+7 (909) 967-77-69</div>
+          </div>
+          <button><a href="#MESS">Оставить заявку</a></button>
+          <div class="adres">
+            г. Москва, <br />
+            1-я улица Измайловского <br />
+            Зверинца, д.8, этаж 8
+          </div>
+        </div>
+        <div class="center">
+          <h2>Меню</h2>
+          <a href="#">Главное</a><br />
+          <a href="#OFF">Для клиентов</a><br />
+          <a href="#USL">Услуги</a><br />
+          <a href="#LOY">Лояльность</a><br />
+          <a href="#KON">Контакты</a>
+        </div>
+        <div class="rigth">
+          <img src="{{ url_for('static', filename='img/Group1.png')}}" alt="" />
+        </div>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
