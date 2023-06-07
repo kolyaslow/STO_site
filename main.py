@@ -27,7 +27,7 @@ def data_validity_check(form):
     if not form['phone_number'].isdigit():
         return 'Недопустимые символы в номере телефона'
 
-    return 'Успешная отправка'
+    return 'Форма отправлена, ждите звонка'
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -43,9 +43,10 @@ def main_page():
                         f"VIN номер: {form['vin_number']} \n" \
                         f"Услуга: {form['service']}"
             send_telegram_message(message)
+            flash(error_data_or_ok, category='sent_successfully')
         else:
             #ормирование подсказок отправки формы
-            flash(error_data_or_ok)
+            flash(error_data_or_ok, category='error')
 
     return render_template('index.html')
 
