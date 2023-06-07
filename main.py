@@ -12,7 +12,6 @@ vin_number_error = 'Не корректный Vin номер'
 len_phone_number_error = 'Номер телефона должен содержать не более 11 символов'
 phone_number_error = 'Недопустимые символы в номере телефона'
 sent_successfully = 'Форма отправлена, ждите звонка'
-
 def data_validity_check(form):
     #проверка имени на содержание не русских символов
     for char in form['name']:
@@ -51,12 +50,12 @@ def main_page():
                         f"Услуга: {form['service']}"
 
             if send_telegram_message(message):
-                print("Я тут")
+                #подсказка формы - успешная отправка
                 flash(error_data_or_ok, category='sent_successfully')
             else:
                 flash('Ошибка отправки сообщения', category='error')
         else:
-            #ормирование подсказок отправки формы
+            #ормирование ошибок для формы
             flash('*' + error_data_or_ok, category='error')
 
     return render_template('index.html')
