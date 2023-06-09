@@ -71,7 +71,7 @@ def main_page():
     else:
         form = RequestForm()
 
-    return render_template('index.html', form=form)
+    return render_template('index2.html', form=form)
 
 
 if __name__ == '__main__':

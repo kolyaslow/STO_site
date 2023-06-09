@@ -623,7 +623,6 @@ header .container .message button:hover {
   transition: 0.4s all ease-in-out;
 }
 
-/*================форма==============*/
 .take {
   padding: 25px 40px;
 }
@@ -633,6 +632,8 @@ header .container .message button:hover {
   }
 }
 .take .container {
+  position: relative;
+  overflow: hidden;
   border: 1px solid #dd7907;
   border-radius: 15px;
 }
@@ -640,6 +641,45 @@ header .container .message button:hover {
   .take .container {
     width: 950px;
     height: 550px;
+  }
+}
+.take .container .grenText {
+  color: rgb(8, 182, 8);
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  left: 15%;
+}
+@media (min-width: 400px) {
+  .take .container .grenText {
+    left: 20%;
+  }
+}
+@media (min-width: 500px) {
+  .take .container .grenText {
+    left: 25%;
+  }
+}
+@media (min-width: 600px) {
+  .take .container .grenText {
+    left: 30%;
+  }
+}
+@media (min-width: 700px) {
+  .take .container .grenText {
+    left: 35%;
+  }
+}
+@media (min-width: 800px) {
+  .take .container .grenText {
+    left: 37%;
+  }
+}
+@media (min-width: 1024px) {
+  .take .container .grenText {
+    font-size: 25px;
+    top: 100px;
+    left: 30%;
   }
 }
 .take .container .main {
@@ -677,28 +717,6 @@ header .container .message button:hover {
     font-size: 36px;
   }
 }
-
-/* вывод ошибок или успешной отправки*/
-.take .container form .msg{
-    width: 217px;
-}
-
-.take .container form .msg.error{
-    color: red;
-}
-
-.take .container form .msg.sent_successfully{
-    color: green;
-}
-@media (min-width: 1024px) {
-  .take .container form .msg {
-    font-size: 25px;
-    height: 50px;
-    width: 667px;
-  }
-}
-
-/*поля формы*/
 .take .container form .inp_1 {
   width: 217px;
   background-color: #e9e8e8;
@@ -732,16 +750,116 @@ header .container .message button:hover {
     width: 578px;
   }
 }
-.take .container form .inp_4 {
-  width: 206px;
-  background-color: #e9e8e8;
+.take .container form .search-box {
+  position: relative;
+  float: right;
 }
-@media (min-width: 1024px) {
-  .take .container form .inp_4 {
-    font-size: 36px;
-    height: 50px;
-    width: 629px;
+@media (max-width: 1024px) {
+  .take .container form .search-box {
+    width: 200px;
   }
+}
+.take .container form .search-box .row {
+  display: flex;
+  align-items: center;
+}
+.take .container form .search-box .row input {
+  border: 0;
+  font-size: 36px;
+  background: transparent;
+  padding-left: 20px;
+  padding-top: 5px;
+  width: 550px;
+  height: 50px;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .row input {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    width: 200;
+    height: 15px;
+  }
+}
+.take .container form .search-box .row button {
+  align-items: center;
+  background: transparent;
+  bottom: 0;
+  outline: 0;
+  font-size: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .row button {
+    width: 20px;
+    height: 20px;
+  }
+}
+.take .container form .search-box .row button .fa-solid {
+  width: 30px;
+  font-size: 22px;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .row button .fa-solid {
+    width: 15px;
+    font-size: 10px;
+  }
+}
+.take .container form .search-box .row ::-moz-placeholder {
+  color: #7e7a7a;
+  font-size: 30px;
+}
+.take .container form .search-box .row ::placeholder {
+  color: #7e7a7a;
+  font-size: 30px;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .row ::-moz-placeholder {
+    font-size: 10px;
+  }
+  .take .container form .search-box .row ::placeholder {
+    font-size: 10px;
+  }
+}
+.take .container form .search-box .result-box {
+  width: 620px;
+  background-color: #e9e8e8;
+  position: absolute;
+  z-index: 1;
+  max-height: 270px;
+  overflow-y: scroll;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .result-box {
+    max-height: 150px;
+    width: 200px;
+  }
+}
+.take .container form .search-box .result-box ul {
+  margin: 0;
+  padding: 2px 5px;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .result-box ul {
+    line-height: 15px;
+  }
+}
+.take .container form .search-box .result-box ul li {
+  font-size: 25px;
+  list-style-type: none;
+  border-radius: 3px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .take .container form .search-box .result-box ul li {
+    font-size: 8px;
+  }
+}
+.take .container form .search-box .result-box ul li:hover {
+  background-color: #a8a6a3;
 }
 .take .container form input {
   border-bottom: 1px solid #000;
@@ -774,8 +892,6 @@ header .container .message button:hover {
 .take .container form button:hover {
   background-color: #140202;
 }
-/*================коней формы==============*/
-
 
 .darts .container {
   box-sizing: border-box;
@@ -1023,3 +1139,23 @@ footer .container .rigth img {
     width: 388px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+.take .container form .msg{
+    width: 217px;
+}
+
+.take .container form .msg.error{
+    color: red;
+}
+
+.take .container form .msg.sent_successfully{
+    color: green;
+}
+@media (min-width: 1024px) {
+  .take .container form .msg {
+    font-size: 25px;
+    height: 50px;
+    width: 667px;
+  }
+}
