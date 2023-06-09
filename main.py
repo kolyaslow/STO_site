@@ -54,7 +54,7 @@ def main_page():
             message = f"Имя: {form.name.data} \n" \
                         f"Номер телефона: {form.phone_number.data} \n" \
                         f"VIN номер: {form.vin_number.data} \n" \
-                        f"Услуга: {form.service.data}"
+                        f"Услуга: {request.form['service']}"
 
             if send_telegram_message(message):
                 #подсказка формы - успешная отправка
@@ -71,7 +71,7 @@ def main_page():
     else:
         form = RequestForm()
 
-    return render_template('index2.html', form=form)
+    return render_template('index.html', form=form)
 
 
 if __name__ == '__main__':

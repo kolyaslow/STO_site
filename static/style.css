@@ -636,6 +636,7 @@ header .container .message button:hover {
   overflow: hidden;
   border: 1px solid #dd7907;
   border-radius: 15px;
+  height: 186px;
 }
 @media (min-width: 1024px) {
   .take .container {
@@ -825,15 +826,15 @@ header .container .message button:hover {
 }
 .take .container form .search-box .result-box {
   width: 620px;
-  background-color: #e9e8e8;
+  background-color: #ffffff;
   position: absolute;
   z-index: 1;
-  max-height: 270px;
+  max-height: 112px;
   overflow-y: scroll;
 }
 @media (max-width: 1024px) {
   .take .container form .search-box .result-box {
-    max-height: 150px;
+    max-height: 42px;
     width: 200px;
   }
 }
@@ -847,9 +848,9 @@ header .container .message button:hover {
   }
 }
 .take .container form .search-box .result-box ul li {
+  border-bottom: 1px solid #020202;
   font-size: 25px;
   list-style-type: none;
-  border-radius: 3px;
   padding: 2px 5px;
   cursor: pointer;
 }
@@ -1139,7 +1140,6 @@ footer .container .rigth img {
     width: 388px;
   }
 }/*# sourceMappingURL=style.css.map */
-
 
 .take .container form .msg{
     width: 217px;
