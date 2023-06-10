@@ -1,3 +1,9 @@
-TELEGRAM_TOKEN = '6014307437:AAHLLlR6cuh0aO3-eHHwE7OR5djWmIwypFc'
-TELEGRAM_CHAT_ID = '1800554892'
-SECRET_KEY = 'AJSH45ADSADasdjf465546asdfs7ojasdnlpsoedsfjsoidsd4'
+from dotenv import load_dotenv
+
+import os
+
+load_dotenv('key_and_id.env')
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
